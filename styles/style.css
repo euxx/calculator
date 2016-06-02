@@ -25,24 +25,50 @@ body {
 }
 
 .container {
-    display: table;
-    width: 300px;
+    width: 400px;
     margin: 0 auto;
     text-align: center;
     vertical-align: middle;
     padding-top: 100px;
+    line-height: 40px;
+}
+
+.screen {
+    height: 40px;
+    border: 1px solid #eee;
+    margin-bottom: 20px;
 }
 
 .row {
-    display: table-row;
-    width: 100%;
+}
+
+.equal-left {
+    width: 270px;
+    display: inline-block;
 }
 
 .cell {
-    display: table-cell;
+    display: inline-block;
     border: 1px solid #eee;
+    margin: 5px;
+    width: 70px;
     height: 40px;
     vertical-align: middle;
+}
+
+.cell:hover {
+    background: #eee;
+}
+
+.zero {
+    width: 140px;
+}
+
+.equal {
+    height: 70px;
+    line-height: 80px;
+    display: inline-block;
+    margin-top: 0;
 }
 
 button {

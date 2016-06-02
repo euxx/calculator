@@ -10,8 +10,9 @@
 	<body>
 
 		<div class="container">
+			<div class="screen"></div>
 			<div class="row">
-				<div class="cell clear">AC</div>
+				<div class="cell clear">C</div>
 				<div class="cell opposite">+/-</div>
 				<div class="cell divide">/</div>
 				<div class="cell multiply">*</div>
@@ -31,19 +32,23 @@
 				<div class="cell add">+</div>
 			</div>
 
-			<div class="row">
-				<div class="cell one">1</div>
-				<div class="cell two">2</div>
-				<div class="cell three">3</div>
-			</div>
+			<div class="row equal-left">
+				<div class="left-up">
+					<div class="cell one">1</div>
+					<div class="cell two">2</div>
+					<div class="cell three">3</div>
+				</div>
 
-			<div class="row">
-				<div class="cell zero">0</div>
-				<div class="cell point">.</div>
-				<div class="cell equal">=</div>
-			</div>
+				<div class="left-down">
+					<div class="cell zero">0</div>
+					<div class="cell point">.</div>
+				</div>
+			</div><!--
+			 --><div class="cell equal">=</div>
+
 		</div>
 
+		<script src="scripts/script.js"></script>
 		<script src="scripts/warmup.js"></script>
 	</body>
 </html>
