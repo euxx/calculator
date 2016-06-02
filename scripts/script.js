@@ -20,27 +20,41 @@ function divide(a, b) {
 	return a / b;
 }
 
-function clear() {
+function equal(what, a, b) {
+	switch(what) {
+		case "add":
+		var result = add(a, b);
+		display;
+		break;
+	}
 
 }
 
+function clear() {
+	result = 0;
+	a = 0;
+	b = 0;
+}
+
+var result, a, b;
 
 var cell = document.querySelector('.one');
 var num;
 cell.addEventListener('click', clickHandler);
-
 console.log(num);
 
-// var cell = document.getElementsByClassName('cell');
-// for(var i = 0; i <= cell.length; i++) {
-// 	cell[i].addEventListener('click', clickHandler);
+// cell.onclick = function() {
 // }
 
+var cells = document.getElementsByClassName('cell');
+for(var i = 0; i <= cells.length; i++) {
+	   cells[i].addEventListener('click', clickHandler);
+}
 
 function clickHandler() {
 	var value = this.textContent;
-    // console.log(value);
-    num = value;
+    console.log(value);
+    num = "I'm num";
     return num;
 }
 
@@ -51,4 +65,3 @@ function clickHandler() {
 	// || value === "0" ||) {
 	// 	numArray.push(value);
 	// }
-
