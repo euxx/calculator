@@ -26,11 +26,10 @@ function clear() {
 
 
 var cell = document.querySelector('.one');
-cell.onclick = function() {
-	var value = cell.textContent
-	return value;
-}
-	console.log(value);
+var num;
+cell.addEventListener('click', clickHandler);
+
+console.log(num);
 
 // var cell = document.getElementsByClassName('cell');
 // for(var i = 0; i <= cell.length; i++) {
@@ -38,11 +37,12 @@ cell.onclick = function() {
 // }
 
 
-// function clickHandler() {
-// 	var value = this.textContent;
-//     console.log(value);
-//     return value;
-// }
+function clickHandler() {
+	var value = this.textContent;
+    // console.log(value);
+    num = value;
+    return num;
+}
 
 	// var numArray = [];
 	// if(value === "1" || value === "2" || value === "3"

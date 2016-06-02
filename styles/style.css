@@ -23,63 +23,69 @@ body {
     height: 100%;
     margin: 0;
 }
+div {
+    box-sizing: border-box;
+}
 
 .container {
-    width: 400px;
-    margin: 0 auto;
+    width: 330px;
+    margin: 20px auto;
+    border: 2px solid #ddd;
+    padding-bottom: 20px;
     text-align: center;
-    vertical-align: middle;
-    padding-top: 100px;
     line-height: 40px;
+    color: #777;
 }
 
 .screen {
-    height: 40px;
-    border: 1px solid #eee;
-    margin-bottom: 20px;
-}
-
-.row {
-}
-
-.equal-left {
-    width: 270px;
-    display: inline-block;
+    width: 285px;
+    height: 60px;
+    line-height: 60px;
+    margin: 10px auto;
+    margin-top: 30px;
+    border: 2px solid #ddd;
+    padding: 7px;
+    font-size: 2rem;
+    text-align: right;
 }
 
 .cell {
     display: inline-block;
-    border: 1px solid #eee;
-    margin: 5px;
-    width: 70px;
+    background: #eee;
+    border: 1px solid #ddd;
+    margin: 5px 4px;
+    width: 60px;
     height: 40px;
+    font-size: 1.4rem;
     vertical-align: middle;
 }
 
 .cell:hover {
-    background: #eee;
+    background: #ddd;
 }
 
 .zero {
-    width: 140px;
+    width: 132px;
 }
 
 .equal {
-    height: 70px;
-    line-height: 80px;
-    display: inline-block;
-    margin-top: 0;
+    display: table-cell;
+    height: 90px;
+    line-height: 90px;
 }
 
-button {
-    display: block;
-    width: 100px;
-    height: 30px;
-    margin: 40px auto;
-    padding: 5px 10px;
-    border-radius: 3px;
-    border: none;
-    background: #eee;
-    color: #999;
-    font-weight: 600;
+.equal-left {
+    display: table-cell;
+    width: 230px;
+}
+
+.down {
+    display: table;
+    table-layout: fixed;
+    margin-left: 12px;
+}
+
+div {
+    border-radius: 5px;
+    /*border: 1px dotted #ccc;*/
 }
