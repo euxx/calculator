@@ -31,37 +31,44 @@ function equal(what, a, b) {
 }
 
 function clear() {
-	result = 0;
-	a = 0;
-	b = 0;
+	screen.textContent = "";
 }
 
-var result, a, b;
+var screen = document.querySelector(".screen"),
+	cells = document.querySelectorAll('.cell'),
+	clear = document.querySelector(".clear");
 
-var cell = document.querySelector('.one');
-var num;
-cell.addEventListener('click', clickHandler);
-console.log(num);
-
-// cell.onclick = function() {
-// }
-
-var cells = document.getElementsByClassName('cell');
 for(var i = 0; i <= cells.length; i++) {
-	   cells[i].addEventListener('click', clickHandler);
+	var display = cells[i].textContent;
+	if(display === "C") {
+		clear.addEventListener('click', function() {
+			screen.textContent = "";
+		})
+	} else {
+	    cells[i].addEventListener('click', clickHandler);
+	}
 }
 
 function clickHandler() {
 	var value = this.textContent;
-    console.log(value);
-    num = "I'm num";
-    return num;
+
+	if(value === "=") {
+		return screen.textContent = eval(screen.textContent);
+	}
+
+	screen.textContent += value;
 }
+
+
+
+// cell.addEventListener('click', clickHandler);
+// cell.onclick = function() {
+// }
 
 	// var numArray = [];
 	// if(value === "1" || value === "2" || value === "3"
 	// || value === "4" || value === "5" || value === "6"
 	// || value === "7" || value === "8" || value === "9"
-	// || value === "0" ||) {
+	// || value === "0") {
 	// 	numArray.push(value);
 	// }
